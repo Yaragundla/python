@@ -1,0 +1,45 @@
+food_menu = ['idli', 'vada', 'poori']
+print(food_menu)
+food_menu[0] = 'pongal'  #accessing elements in list
+print(food_menu)
+food_menu.append('dosa')   #modifying elements in list
+print(food_menu)
+food_menu.insert(0, 'upma')  #adding elements into list
+print(food_menu)
+del food_menu[3]   #removing elements in the list
+print(food_menu)
+print(food_menu.pop())
+print(food_menu)
+food_menu.remove('vada')
+print(food_menu)
+
+food_menu = ['biryani','roti','eggmaggi'] #sorting a list permanently
+print(food_menu)
+food_menu.sort()
+print(food_menu)
+food_menu.sort(reverse=True)  #sorting in reverse order
+print(food_menu)
+food_menu.reverse()
+print(food_menu)
+print(len(food_menu))  #length of list..
+
+for x in food_menu:
+    print(x.title() + ', is favorite item')
+
+numbers = list(range(1,6))
+print(numbers)
+even_numbers = list(range(2,21,2))
+print(even_numbers)
+
+squares = []
+for x in range(1,11):
+    squares.append(x**2)
+print(squares)
+
+squares = [x ** 2 for x in range(1,11)]
+print(squares)
+
+print(food_menu[:])     #slicing.....
+print(food_menu[-1:])
+print(food_menu[0:2])
+

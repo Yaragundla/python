@@ -1,0 +1,43 @@
+sem_1 = {'result': 'distinction', 'points': 9}
+print(sem_1['result'])      #accessing of elements
+print(sem_1['points'])
+print('i have got' +" " + str(sem_1['points']) + 'points')
+sem_1['year'] = 2019    #adding of elements
+print(sem_1)
+print(' the result is '+ " " +sem_1['result'])
+print(sem_1)
+sem_1['result'] = 'exemplery'        #modifying elements
+print('now the result is '+ " " +sem_1['result'].title())
+sem_1['qpaper'] = 'medium'
+if sem_1['qpaper'] == 'easy':
+    print("result is good as qpaper is" + sem_1['qpaper'])
+elif sem_1['qpaper'] == 'medium':
+    print('result is avg as qpaper is' +" " + sem_1['qpaper'])
+else:
+    print('result is very bad')
+
+del sem_1['points']         #removing elements from dictionary
+print(sem_1)
+favorite_languages = {'jen': 'python','sarah': 'c','edward': 'ruby','phil': 'python'}
+print(favorite_languages['jen'] + " is my favourite language")
+favorite_person = {'first_name':'yaragundla','last_name':'rajesh','fav_color':'blue'}
+
+
+for name,obj in favorite_person.items():   #accessing each element in dictionary
+    print(name.title()+ " : "+ obj.title())
+
+for obj in favorite_person.values():
+    print(name.title()+ " "+obj.title())
+
+# Make an empty list for storing aliens.
+aliens = []
+# Make 30 green aliens.
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+# Show the first 3 aliens
+for alien in aliens[:3]:
+    print(alien)
+print("...")
+# Show how many aliens have been created.
+print("Total number of aliens: " + str(len(aliens)))

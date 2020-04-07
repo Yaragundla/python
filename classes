@@ -1,0 +1,30 @@
+class dog:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        def sit(self):
+            print(self.name.title() + " is now sitting. ")
+        def rollover(self):
+            print(self.name.title()+" is rolling..")
+object = dog('johnson',1)
+object.sit()
+object.rollover()
+my_dog = dog('johnson',1)
+your_dog = dog('pittu',2)
+print("my dog's name is "+my_dog.name.title())
+print("my dog's age is "+str(my_dog.age)+" year")
+print("your dog's name is "+your_dog.name.title())
+print("your dog's age is "+str(your_dog.age)+" years")
+
+class car:
+    def __init__(self,company,model,year):
+        self.company = company
+        self.model = model
+        self.year = year
+    def descriptive(self):
+        baby = print(self.company.title() +" "+self.model+" "+str(self.year))
+        return baby
+object = car('audi','x4',2020)
+object.descriptive()
+
+

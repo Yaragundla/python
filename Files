@@ -1,0 +1,38 @@
+
+f = open("mydata",'r')
+print(f.read())    #to print the data in the file
+print(f.readline())  #to print the only the first line in the data..
+print(f.readlines())  #To print all the lines in the list..
+
+filename = "mydata"
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+for line in lines:
+    print(line.strip())
+with open("mydata") as file_object:
+    contents = file_object.read()
+    print(contents)
+
+f = open("mydata",'w')     #writing on the file..
+f1 = open("abc",'w')
+f1.write('I have got much fun')
+f1.write(' with my spd.breaker')
+f1.write(' in these days')
+f1 = open('abc','a')       #Appending data to the file...
+f1.write(' sleepy')
+
+filename = "mydata"
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+mydata = ''
+for line in lines:
+    mydata += line.rstrip()
+print(mydata + "...")
+print(len(mydata))
+message = 'i like chicken'
+message=message.replace('chicken','mutton')
+print(message)
+

@@ -1,0 +1,64 @@
+a = 4
+b = 2
+
+try:
+    print('resource open')
+    print(a/b)
+    k = int(input('enter a num'))
+    print(k)
+except ZeroDivisionError as e:
+    print('Hey! you cannot divide a number by zero..',e)
+except ValueError as e:
+    print('invalid input')
+except Exception as e:
+    print('something went wrong...')
+finally:
+    print('resource close')
+
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+while True:
+
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("Second number: ")
+    if second_number == 'q':
+         break
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError as e:
+        print("u can't divide")
+    else:
+        print(answer)
+filename = 'mydata'
+try:
+    f = open('mydata','r')
+    print(f.read())
+except FileNotFoundError as e:
+    msg = 'Sorry the file ' + filename +" is not found"
+    print(msg)
+else:
+    words = filename.split()
+    num_words = len(words)
+    print(num_words)
+
+title = "rajesh in wonderla"
+contents = title.split()
+print(contents)
+numwords = len(contents)
+print(numwords)
+
+filename = 'mydata'     #Failing silently....
+try:
+    f = open('mydata','r')
+    print(f.read())
+except FileNotFoundError as e:
+    pass
+
+
+
+
+
+
+

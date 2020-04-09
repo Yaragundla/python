@@ -1,0 +1,68 @@
+
+import json
+numbers = [2,3,4,5,6,8]
+f = open('numbers','r')
+json.dumps(numbers,f)
+
+import json
+numbers = [2, 3, 5, 7, 11, 13]
+filename = 'numbers.json'
+with open(filename, 'w') as f_obj:
+    json.dump(numbers, f_obj)
+
+import json
+filename = 'numbers.json'
+with open(filename) as f_obj:
+    numbers = json.load(f_obj)
+    print(numbers)
+
+import json
+username = 'Rajesh'
+filename = 'username.json'
+with open(filename,'w') as f_obj:
+    json.dump(username,f_obj)
+    print("we wi'll remember u " + username+" when u come back")
+
+import json
+filename = 'username.json'
+with open(filename) as f_obj:
+    username=json.load(f_obj)
+    print("welcome back " + username)
+
+import json
+def get_stored_username():
+    filename = 'username.json'
+    try:
+        with open(filename) as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+def greet_user():
+    username = get_stored_username()
+    if username:
+        print("Welcome back, " + username + "!")
+    else:
+        username = input("What is your name? ")
+        filename = 'username.json'
+        with open(filename, 'w') as f_obj:
+            json.dump(username, f_obj)
+            print("We'll remember you when you come back, " + username + "!")
+greet_user()
+
+import json
+favnumber = int(input('enter the num'))
+filename = 'favnumber.json'
+with open(filename,'w') as f_obj:
+    json.dump(favnumber,f_obj)
+    print("I know it's your favnumber " + str(favnumber))
+import json
+filename = 'favnumber.json'
+with open(filename) as f_obj:
+    favnumber=json.load(f_obj)
+    print("yeah! it is " + str(favnumber))
+
+def get_formatted_name(first, last):
+    full_name = first + ' ' + last
+    return full_name
